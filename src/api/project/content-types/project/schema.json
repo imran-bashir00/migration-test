@@ -1,0 +1,136 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Projects",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project_name": {
+      "type": "string",
+      "required": true
+    },
+    "project_description": {
+      "type": "text",
+      "required": true
+    },
+    "project_cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "project_story": {
+      "type": "richtext",
+      "required": true
+    },
+    "project_status": {
+      "type": "enumeration",
+      "enum": [
+        "Live",
+        "Upcoming",
+        "Completed"
+      ],
+      "required": true
+    },
+    "sale_address": {
+      "type": "string"
+    },
+    "project_token_price": {
+      "type": "string"
+    },
+    "project_raise_target": {
+      "type": "string",
+      "required": true
+    },
+    "project_start_time": {
+      "type": "datetime",
+      "required": true
+    },
+    "project_end_time": {
+      "type": "datetime",
+      "required": true
+    },
+    "tiers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tier.tier",
+      "mappedBy": "project"
+    },
+    "wallet_tier": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::wallet-tier.wallet-tier",
+      "inversedBy": "projects"
+    },
+    "token_name": {
+      "type": "text"
+    },
+    "token_symbol": {
+      "type": "text"
+    },
+    "total_available_token": {
+      "type": "text"
+    },
+    "individual_purchase_limit": {
+      "type": "text"
+    },
+    "token_details": {
+      "type": "richtext"
+    },
+    "rewards": {
+      "type": "richtext"
+    },
+    "cool_down_duration": {
+      "type": "string",
+      "required": true
+    },
+    "recipient": {
+      "type": "string",
+      "required": true
+    },
+    "reserve_token": {
+      "type": "string",
+      "required": true
+    },
+    "forwarding_address": {
+      "type": "string",
+      "required": true
+    },
+    "deployer": {
+      "type": "string"
+    },
+    "facebook_url": {
+      "type": "string"
+    },
+    "instagram_url": {
+      "type": "string"
+    },
+    "twitch_url": {
+      "type": "string"
+    },
+    "twitter_url": {
+      "type": "string"
+    },
+    "youtube_url": {
+      "type": "string"
+    },
+    "linked_in_url": {
+      "type": "string"
+    },
+    "discord_url": {
+      "type": "string"
+    },
+    "telegram_url": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wallet_tiers",
+  "info": {
+    "singularName": "wallet-tier",
+    "pluralName": "wallet-tiers",
+    "displayName": "Wallet Tiers",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contract_address": {
+      "type": "string",
+      "unique": true
+    },
+    "tier_name": {
+      "type": "string"
+    },
+    "user_wallets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::user-wallet.user-wallet",
+      "mappedBy": "wallet_tiers"
+    },
+    "verify_tier_contract_address": {
+      "type": "string"
+    },
+    "tier_label": {
+      "type": "string",
+      "required": true
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "wallet_tier"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tiers",
+  "info": {
+    "singularName": "tier",
+    "pluralName": "tiers",
+    "displayName": "Past Tier Raise",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "tiers"
+    },
+    "amount_raised": {
+      "type": "decimal"
+    }
+  }
+}

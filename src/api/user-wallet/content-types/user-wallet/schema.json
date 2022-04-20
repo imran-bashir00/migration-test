@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_wallets",
+  "info": {
+    "singularName": "user-wallet",
+    "pluralName": "user-wallets",
+    "displayName": "User Wallets",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "wallet_address": {
+      "type": "string"
+    },
+    "contract_action": {
+      "type": "enumeration",
+      "enum": [
+        "Approve",
+        "Ban",
+        "Remove"
+      ]
+    },
+    "wallet_tiers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::wallet-tier.wallet-tier",
+      "inversedBy": "user_wallets"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+module.exports = {
+  apps: [
+    {
+      name: 'unix-gaming',
+      script: 'npm',
+      args: 'start',
+//      args: 'run develop',
+      autorestart: true,
+      max_restarts: 5,
+    },
+  ],
+};

@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_banner_projects",
+  "info": {
+    "singularName": "home-banner-project",
+    "pluralName": "home-banner-projects",
+    "displayName": "Home Banner Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "contract_address": {
+      "type": "text"
+    },
+    "banner": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "is_logo_with_text": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

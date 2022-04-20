@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_page_tiers",
+  "info": {
+    "singularName": "home-page-tier",
+    "pluralName": "home-page-tiers",
+    "displayName": "Home Page Tier"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "benefits": {
+      "type": "json"
+    }
+  }
+}
